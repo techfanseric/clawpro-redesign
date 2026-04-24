@@ -12,8 +12,7 @@
       <div class="console">
         <header class="topbar">
           <div class="brand-trail" aria-label="Breadcrumb">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <strong>CLAWPRO</strong>
+                        <strong>CLAWPRO</strong>
             <span>/</span>
             <span>console</span>
             <span>/</span>
@@ -23,22 +22,12 @@
           </div>
           <div class="topbar-status">
             <span class="region"><i></i> 华东地区 nominal</span>
-            <span>14:23:08 UTC</span>
-            <button class="theme-toggle" type="button" aria-label="切换黑夜模式" aria-pressed="false">
-              <i data-lucide="sun" class="theme-icon light-icon"></i>
-              <i data-lucide="moon" class="theme-icon dark-icon" style="display:none"></i>
-              <span class="theme-label">dark</span>
-            </button>
-            <span class="user-chip">JS</span>
-            <span>jingsujiang</span>
-          </div>
+                                  </div>
         </header>
 
         <aside class="sidebar">
           <section class="identity">
-            <div class="crab-mark" aria-hidden="true">
-              <span></span>
-            </div>
+            <img src="./logo.svg" alt="ClawPro" width="42" height="36" />
             <div>
               <strong>管控端</strong>
               <small>ClawPro Admin</small>
@@ -47,14 +36,14 @@
 
           <nav aria-label="ClawPro Admin">
             <div class="nav-group">
-              <div class="nav-title">基础信息 <span>03</span></div>
+              <div class="nav-title">基础信息</div>
               <a class="nav-item selected" href="#basic"><span class="nav-icon" data-lucide="settings"></span> 基础信息配置</a>
               <a class="nav-item" href="#strategy"><span class="nav-icon" data-lucide="shield"></span> 平台策略</a>
               <a class="nav-item" href="#users"><span class="nav-icon" data-lucide="users"></span> 用户管理</a>
             </div>
 
             <div class="nav-group">
-              <div class="nav-title">Agent 配置 <span>06</span></div>
+              <div class="nav-title">Agent 配置</div>
               <a class="nav-item" href="#models"><span class="nav-icon" data-lucide="box"></span> 模型配置</a>
               <a class="nav-item" href="#channels"><span class="nav-icon" data-lucide="cable"></span> 通道配置</a>
               <a class="nav-item" href="#skills"><span class="nav-icon" data-lucide="sparkles"></span> 技能配置</a>
@@ -64,20 +53,20 @@
             </div>
 
             <div class="nav-group">
-              <div class="nav-title">云设备配置 <span>02</span></div>
+              <div class="nav-title">云设备配置</div>
               <a class="nav-item" href="#images"><span class="nav-icon" data-lucide="image"></span> 镜像管理</a>
               <a class="nav-item" href="#network"><span class="nav-icon" data-lucide="network"></span> 网络管理</a>
             </div>
 
             <div class="nav-group">
-              <div class="nav-title">运营监控 <span>03</span></div>
+              <div class="nav-title">运营监控</div>
               <a class="nav-item" href="#agents"><span class="nav-icon" data-lucide="bot"></span> Agent 列表</a>
               <a class="nav-item" href="#tokens"><span class="nav-icon" data-lucide="coins"></span> Token 监控</a>
               <a class="nav-item" href="#observability"><span class="nav-icon" data-lucide="activity"></span> 运维观测</a>
             </div>
 
             <div class="nav-group">
-              <div class="nav-title">安全审计 <span>03</span></div>
+              <div class="nav-title">安全审计</div>
               <a class="nav-item" href="#security"><span class="nav-icon" data-lucide="shield-check"></span> AI Agent 安全</a>
               <a class="nav-item" href="#sessions"><span class="nav-icon" data-lucide="messages-square"></span> 会话管理</a>
               <a class="nav-item" href="#logs"><span class="nav-icon" data-lucide="scroll-text"></span> 操作记录</a>
@@ -88,28 +77,19 @@
             <span class="avatar">J</span>
             <div>
               <strong>jingsujiang</strong>
-              <small>管理员 · context retained</small>
+              <small>管理员</small>
             </div>
+            <button class="theme-toggle" type="button" aria-label="切换黑夜模式" aria-pressed="false">
+              <i data-lucide="sun" class="theme-icon light-icon"></i>
+              <i data-lucide="moon" class="theme-icon dark-icon" style="display:none"></i>
+            </button>
           </div>
         </aside>
 
         <main class="content">
           <section class="hero">
-            <p class="eyebrow">session · admin setup · 2026-04-24 · 15 modules</p>
-            <h1>Hi Mila，<span>当前还有 2 项待配置</span></h1>
+                        <h1>Hi Mila，<br/><span>当前还有 2 项待配置</span></h1>
             <p class="summary">以下为初始化必填配置，全部完成后用户端即可正常使用；更多高级配置可在后续前往对应功能页继续调整。</p>
-          </section>
-
-          <section class="command-strip" aria-label="Primary setup query">
-            <div>
-              <span class="play">▶</span>
-              <strong>检查基础信息配置、默认配额、企业用户和模型配置状态</strong>
-            </div>
-            <div class="quick-actions">
-              <button type="button">列出未完成项</button>
-              <button type="button">同步平台信息</button>
-              <button type="button">打开 API 文档</button>
-            </div>
           </section>
 
           <div class="workspace-grid">
@@ -270,7 +250,6 @@
     <script>
       const root = document.documentElement;
       const toggle = document.querySelector(".theme-toggle");
-      const label = document.querySelector(".theme-label");
       const savedTheme = localStorage.getItem("clawpro-theme");
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
@@ -281,7 +260,6 @@
       function applyTheme(theme) {
         root.dataset.theme = theme;
         toggle?.setAttribute("aria-pressed", String(theme === "dark"));
-        if (label) label.textContent = theme;
         if (lightIcon && darkIcon) {
           lightIcon.style.display = theme === "dark" ? "block" : "none";
           darkIcon.style.display = theme === "dark" ? "none" : "block";

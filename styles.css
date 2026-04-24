@@ -146,13 +146,6 @@ input {
   font-weight: 700;
 }
 
-.brand-mark {
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  background: linear-gradient(135deg, color-mix(in oklch, var(--blue) 72%, white), var(--blue));
-  box-shadow: 0 0 0 4px color-mix(in oklch, var(--blue) 14%, transparent);
-}
 
 .region {
   padding: 5px 12px;
@@ -237,40 +230,6 @@ input {
   color: var(--muted);
 }
 
-.crab-mark {
-  position: relative;
-  display: grid;
-  width: 34px;
-  height: 28px;
-  place-items: center;
-}
-
-.crab-mark::before,
-.crab-mark::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-}
-
-.crab-mark::before {
-  left: 0;
-}
-
-.crab-mark::after {
-  right: 0;
-}
-
-.crab-mark span {
-  width: 24px;
-  height: 18px;
-  border: 2px solid var(--blue);
-  border-radius: 50% 50% 42% 42%;
-  background: var(--blue-soft);
-}
 
 .nav-group + .nav-group {
   margin-top: 24px;
@@ -335,6 +294,10 @@ input {
   gap: 10px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
+}
+
+.sidebar-foot .theme-toggle {
+  margin-left: auto;
 }
 
 .avatar {
@@ -754,6 +717,7 @@ input {
   .sidebar-foot {
     position: static;
     margin-top: 24px;
+    border-top: 1px solid var(--line);
   }
 
   .content {
