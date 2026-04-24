@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClawPro Admin · NIMBUS Redesign</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="desktop-shell">
+      <div class="console">
+        <header class="topbar">
+          <div class="brand-trail" aria-label="Breadcrumb">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <strong>CLAWPRO</strong>
+            <span>/</span>
+            <span>console</span>
+            <span>/</span>
+            <span>admin</span>
+            <span>/</span>
+            <span class="active">setup</span>
+          </div>
+          <div class="topbar-status">
+            <span class="region"><i></i> 华东地区 nominal</span>
+            <span>14:23:08 UTC</span>
+            <button class="theme-toggle" type="button" aria-label="切换黑夜模式" aria-pressed="false">
+              <span class="theme-icon" aria-hidden="true"></span>
+              <span class="theme-label">night</span>
+            </button>
+            <span class="user-chip">JS</span>
+            <span>jingsujiang</span>
+          </div>
+        </header>
+
+        <aside class="sidebar">
+          <section class="identity">
+            <div class="crab-mark" aria-hidden="true">
+              <span></span>
+            </div>
+            <div>
+              <strong>管控端</strong>
+              <small>ClawPro Admin</small>
+            </div>
+          </section>
+
+          <nav aria-label="ClawPro Admin">
+            <div class="nav-group">
+              <div class="nav-title">基础信息 <span>03</span></div>
+              <a class="nav-item selected" href="#basic"><span>01</span> 基础信息配置</a>
+              <a class="nav-item" href="#strategy"><span>02</span> 平台策略</a>
+              <a class="nav-item" href="#users"><span>03</span> 用户管理</a>
+            </div>
+
+            <div class="nav-group">
+              <div class="nav-title">Agent 配置 <span>06</span></div>
+              <a class="nav-item" href="#models"><span>04</span> 模型配置</a>
+              <a class="nav-item" href="#channels"><span>05</span> 通道配置</a>
+              <a class="nav-item" href="#skills"><span>06</span> 技能配置</a>
+              <a class="nav-item" href="#tools"><span>07</span> Agent 工具库</a>
+              <a class="nav-item" href="#memory"><span>08</span> 记忆管理</a>
+              <a class="nav-item" href="#drive"><span>09</span> 网盘管理</a>
+            </div>
+
+            <div class="nav-group">
+              <div class="nav-title">云设备配置 <span>02</span></div>
+              <a class="nav-item" href="#images"><span>10</span> 镜像管理</a>
+              <a class="nav-item" href="#network"><span>11</span> 网络管理</a>
+            </div>
+
+            <div class="nav-group">
+              <div class="nav-title">运营监控 <span>03</span></div>
+              <a class="nav-item" href="#agents"><span>12</span> Agent 列表</a>
+              <a class="nav-item" href="#tokens"><span>13</span> Token 监控</a>
+              <a class="nav-item" href="#observability"><span>14</span> 运维观测</a>
+            </div>
+
+            <div class="nav-group">
+              <div class="nav-title">安全审计 <span>03</span></div>
+              <a class="nav-item" href="#security"><span>15</span> AI Agent 安全</a>
+              <a class="nav-item" href="#sessions"><span>16</span> 会话管理</a>
+              <a class="nav-item" href="#logs"><span>17</span> 操作记录</a>
+            </div>
+          </nav>
+
+          <div class="sidebar-foot">
+            <span class="avatar">J</span>
+            <div>
+              <strong>jingsujiang</strong>
+              <small>管理员 · context retained</small>
+            </div>
+          </div>
+        </aside>
+
+        <main class="content">
+          <section class="hero">
+            <p class="eyebrow">session · admin setup · 2026-04-24 · 15 modules</p>
+            <h1>晚上好，jingsujiang。<br /><span>ClawPro 初始化配置全部完成。</span></h1>
+            <p class="summary">已保留现有管理入口、配置表单、平台信息、API 文档与产品动态；当前界面按 NIMBUS 控制台规范重新组织为任务会话。</p>
+          </section>
+
+          <section class="command-strip" aria-label="Primary setup query">
+            <div>
+              <span class="play">▶</span>
+              <strong>检查基础信息配置、默认配额、企业用户和模型配置状态</strong>
+            </div>
+            <div class="quick-actions">
+              <button type="button">列出未完成项</button>
+              <button type="button">同步平台信息</button>
+              <button type="button">打开 API 文档</button>
+            </div>
+          </section>
+
+          <div class="workspace-grid">
+            <section class="session-feed" aria-label="Setup workflow">
+              <article class="ai-row" id="basic">
+                <div class="speaker">ai</div>
+                <div class="row-body">
+                  <div class="row-header">
+                    <div>
+                      <p class="overline">PLATFORM · BRAND</p>
+                      <h2>设置平台名称与品牌</h2>
+                      <p>配置展示在用户端的网站名称和 Logo。</p>
+                    </div>
+                    <span class="status done">已完成</span>
+                  </div>
+
+                  <div class="form-shell">
+                    <label>
+                      <span>网络名称</span>
+                      <input value="这是一个可自定义的名字" aria-label="网络名称" />
+                      <small>将展示在用户端左上角常驻和首页</small>
+                    </label>
+
+                    <div class="logo-upload">
+                      <span class="logo-orb">CP</span>
+                      <div>
+                        <strong>网络 logo</strong>
+                        <small>建议尺寸 200×200px，不超过 512KB</small>
+                      </div>
+                    </div>
+
+                    <button type="button" class="primary-action">保存</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ai-row">
+                <div class="speaker">ai</div>
+                <div class="row-body">
+                  <div class="row-header">
+                    <div>
+                      <p class="overline">QUOTA · DEFAULT</p>
+                      <h2>配置用户默认配额</h2>
+                      <p>设置新用户创建时自动应用的 Agent 数量上限和每日 Tokens 上限，有效控制企业成本。</p>
+                    </div>
+                    <span class="status done">已完成</span>
+                  </div>
+
+                  <div class="metric-form">
+                    <label>
+                      <span>单用户 Agent 数量上限</span>
+                      <input value="10 个" aria-label="Agent 数量上限" />
+                    </label>
+                    <label>
+                      <span>单用户每日 Tokens 上限</span>
+                      <input value="无限制" aria-label="Tokens 上限" />
+                    </label>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ai-row" id="users">
+                <div class="speaker">ai</div>
+                <div class="row-body">
+                  <div class="row-header compact">
+                    <div>
+                      <p class="overline">DIRECTORY · USERS</p>
+                      <h2>导入企业用户</h2>
+                      <p>前往用户管理页添加企业用户，添加后即可使用平台。</p>
+                    </div>
+                    <span class="status done">已完成</span>
+                  </div>
+                  <button type="button" class="secondary-action">用户管理 →</button>
+                </div>
+              </article>
+
+              <article class="ai-row" id="models">
+                <div class="speaker">ai</div>
+                <div class="row-body">
+                  <div class="row-header compact">
+                    <div>
+                      <p class="overline">MODEL · ROUTING</p>
+                      <h2>配置模型</h2>
+                      <p>为用户端配置至少一个可用的 AI 模型，用户在创建 Agent 时将从已配置的模型中选择。</p>
+                    </div>
+                    <span class="status done">已完成</span>
+                  </div>
+                  <div class="model-grid">
+                    <div><span>默认模型</span><strong>Hermes Agent</strong></div>
+                    <div><span>通道状态</span><strong>3 active</strong></div>
+                    <div><span>Skill 包</span><strong>一键配置</strong></div>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <aside class="inspector" aria-label="Platform inspector">
+              <section class="panel">
+                <div class="panel-title">
+                  <p class="overline">BASIC · INFO</p>
+                  <h2>平台基础信息</h2>
+                </div>
+                <dl class="info-list">
+                  <div>
+                    <dt>所在区域</dt>
+                    <dd>华东地区（南京）</dd>
+                  </div>
+                  <div>
+                    <dt>域名</dt>
+                    <dd>https://nmvy3n7z.tcaisite.com</dd>
+                  </div>
+                  <div>
+                    <dt>关联腾讯云账号</dt>
+                    <dd>3205597606</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section class="panel doc-panel">
+                <div>
+                  <p class="overline">REFERENCE</p>
+                  <h2>API 文档 ↗</h2>
+                  <p>查阅开放接口与调用示例</p>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-title">
+                  <p class="overline">CHANGELOG · LIVE</p>
+                  <h2>产品动态</h2>
+                </div>
+                <ol class="timeline">
+                  <li>
+                    <span>功能上线</span>
+                    <strong>Hermes 支持模型、通道和 Skill 一键配置</strong>
+                    <p>支持快速配置 Hermes 模型、通道和 Skill，并提供角色设定和初始技能包等能力</p>
+                    <time>2026-04-22</time>
+                  </li>
+                  <li>
+                    <span>功能上线</span>
+                    <strong>ClawPro 支持新建 Hermes Agent 和 LightClaw ACE 实例</strong>
+                    <p>可通过终端或 Web UI 面板配置</p>
+                    <time>2026-04-20</time>
+                  </li>
+                  <li>
+                    <span>体验优化</span>
+                    <strong>OpenClaw 更名为 Agent</strong>
+                    <p>ClawPro 整体适配为通用 Agent 管控台</p>
+                    <time>2026-04-20</time>
+                  </li>
+                </ol>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      const root = document.documentElement;
+      const toggle = document.querySelector(".theme-toggle");
+      const label = document.querySelector(".theme-label");
+      const savedTheme = localStorage.getItem("clawpro-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        toggle?.setAttribute("aria-pressed", String(theme === "dark"));
+        if (label) label.textContent = theme === "dark" ? "day" : "night";
+      }
+
+      applyTheme(initialTheme);
+
+      toggle?.addEventListener("click", () => {
+        const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+        localStorage.setItem("clawpro-theme", nextTheme);
+        applyTheme(nextTheme);
+      });
+    </script>
+  </body>
+</html>
