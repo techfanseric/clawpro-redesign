@@ -25,8 +25,9 @@
             <span class="region"><i></i> 华东地区 nominal</span>
             <span>14:23:08 UTC</span>
             <button class="theme-toggle" type="button" aria-label="切换黑夜模式" aria-pressed="false">
-              <span class="theme-icon" aria-hidden="true"></span>
-              <span class="theme-label">night</span>
+              <i data-lucide="sun" class="theme-icon light-icon"></i>
+              <i data-lucide="moon" class="theme-icon dark-icon" style="display:none"></i>
+              <span class="theme-label">dark</span>
             </button>
             <span class="user-chip">JS</span>
             <span>jingsujiang</span>
@@ -114,7 +115,7 @@
           <div class="workspace-grid">
             <section class="session-feed" aria-label="Setup workflow">
               <article class="ai-row" id="basic">
-                <div class="speaker">ai</div>
+                <div class="speaker">01</div>
                 <div class="row-body">
                   <div class="row-header">
                     <div>
@@ -146,7 +147,7 @@
               </article>
 
               <article class="ai-row">
-                <div class="speaker">ai</div>
+                <div class="speaker">02</div>
                 <div class="row-body">
                   <div class="row-header">
                     <div>
@@ -171,7 +172,7 @@
               </article>
 
               <article class="ai-row" id="users">
-                <div class="speaker">ai</div>
+                <div class="speaker">03</div>
                 <div class="row-body">
                   <div class="row-header compact">
                     <div>
@@ -186,7 +187,7 @@
               </article>
 
               <article class="ai-row" id="models">
-                <div class="speaker">ai</div>
+                <div class="speaker">04</div>
                 <div class="row-body">
                   <div class="row-header compact">
                     <div>
@@ -274,10 +275,17 @@
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
 
+      const lightIcon = document.querySelector(".light-icon");
+      const darkIcon = document.querySelector(".dark-icon");
+
       function applyTheme(theme) {
         root.dataset.theme = theme;
         toggle?.setAttribute("aria-pressed", String(theme === "dark"));
-        if (label) label.textContent = theme === "dark" ? "day" : "night";
+        if (label) label.textContent = theme;
+        if (lightIcon && darkIcon) {
+          lightIcon.style.display = theme === "dark" ? "block" : "none";
+          darkIcon.style.display = theme === "dark" ? "none" : "block";
+        }
       }
 
       applyTheme(initialTheme);

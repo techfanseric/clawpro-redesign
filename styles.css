@@ -2,7 +2,7 @@
   color-scheme: light;
   --ink: oklch(21% 0.035 258);
   --muted: oklch(55% 0.027 258);
-  --faint: oklch(72% 0.022 258);
+  --faint: oklch(45% 0.022 258);
   --line: oklch(90% 0.012 258);
   --line-strong: oklch(84% 0.018 258);
   --grid-line: oklch(97.2% 0.003 258);
@@ -197,17 +197,20 @@ input {
 }
 
 .theme-icon {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--blue);
+  width: 16px;
+  height: 16px;
 }
 
-:root[data-theme="dark"] .theme-icon {
-  box-shadow: inset -4px 0 0 var(--surface);
+.light-icon {
+  color: var(--yellow);
+}
+
+.dark-icon {
+  color: var(--blue);
 }
 
 .sidebar {
+  position: relative;
   grid-row: 2;
   padding: 24px 22px;
   border-right: 1px solid var(--line);
