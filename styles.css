@@ -470,8 +470,8 @@ input {
 }
 
 .status.done {
-  background: color-mix(in oklch, var(--green) 22%, var(--surface));
-  color: color-mix(in oklch, var(--green) 80%, var(--ink));
+  background: rgba(220, 252, 231, 1);
+  color: rgba(22, 101, 52, 1);
 }
 
 .form-shell,
