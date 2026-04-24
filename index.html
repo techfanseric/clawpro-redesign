@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClawPro Admin · NIMBUS Redesign</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <div class="desktop-shell">
@@ -46,39 +47,39 @@
           <nav aria-label="ClawPro Admin">
             <div class="nav-group">
               <div class="nav-title">基础信息 <span>03</span></div>
-              <a class="nav-item selected" href="#basic"><span>01</span> 基础信息配置</a>
-              <a class="nav-item" href="#strategy"><span>02</span> 平台策略</a>
-              <a class="nav-item" href="#users"><span>03</span> 用户管理</a>
+              <a class="nav-item selected" href="#basic"><span class="nav-icon" data-lucide="settings"></span> 基础信息配置</a>
+              <a class="nav-item" href="#strategy"><span class="nav-icon" data-lucide="shield"></span> 平台策略</a>
+              <a class="nav-item" href="#users"><span class="nav-icon" data-lucide="users"></span> 用户管理</a>
             </div>
 
             <div class="nav-group">
               <div class="nav-title">Agent 配置 <span>06</span></div>
-              <a class="nav-item" href="#models"><span>04</span> 模型配置</a>
-              <a class="nav-item" href="#channels"><span>05</span> 通道配置</a>
-              <a class="nav-item" href="#skills"><span>06</span> 技能配置</a>
-              <a class="nav-item" href="#tools"><span>07</span> Agent 工具库</a>
-              <a class="nav-item" href="#memory"><span>08</span> 记忆管理</a>
-              <a class="nav-item" href="#drive"><span>09</span> 网盘管理</a>
+              <a class="nav-item" href="#models"><span class="nav-icon" data-lucide="box"></span> 模型配置</a>
+              <a class="nav-item" href="#channels"><span class="nav-icon" data-lucide="cable"></span> 通道配置</a>
+              <a class="nav-item" href="#skills"><span class="nav-icon" data-lucide="sparkles"></span> 技能配置</a>
+              <a class="nav-item" href="#tools"><span class="nav-icon" data-lucide="wrench"></span> Agent 工具库</a>
+              <a class="nav-item" href="#memory"><span class="nav-icon" data-lucide="brain"></span> 记忆管理</a>
+              <a class="nav-item" href="#drive"><span class="nav-icon" data-lucide="hard-drive"></span> 网盘管理</a>
             </div>
 
             <div class="nav-group">
               <div class="nav-title">云设备配置 <span>02</span></div>
-              <a class="nav-item" href="#images"><span>10</span> 镜像管理</a>
-              <a class="nav-item" href="#network"><span>11</span> 网络管理</a>
+              <a class="nav-item" href="#images"><span class="nav-icon" data-lucide="image"></span> 镜像管理</a>
+              <a class="nav-item" href="#network"><span class="nav-icon" data-lucide="network"></span> 网络管理</a>
             </div>
 
             <div class="nav-group">
               <div class="nav-title">运营监控 <span>03</span></div>
-              <a class="nav-item" href="#agents"><span>12</span> Agent 列表</a>
-              <a class="nav-item" href="#tokens"><span>13</span> Token 监控</a>
-              <a class="nav-item" href="#observability"><span>14</span> 运维观测</a>
+              <a class="nav-item" href="#agents"><span class="nav-icon" data-lucide="bot"></span> Agent 列表</a>
+              <a class="nav-item" href="#tokens"><span class="nav-icon" data-lucide="coins"></span> Token 监控</a>
+              <a class="nav-item" href="#observability"><span class="nav-icon" data-lucide="activity"></span> 运维观测</a>
             </div>
 
             <div class="nav-group">
               <div class="nav-title">安全审计 <span>03</span></div>
-              <a class="nav-item" href="#security"><span>15</span> AI Agent 安全</a>
-              <a class="nav-item" href="#sessions"><span>16</span> 会话管理</a>
-              <a class="nav-item" href="#logs"><span>17</span> 操作记录</a>
+              <a class="nav-item" href="#security"><span class="nav-icon" data-lucide="shield-check"></span> AI Agent 安全</a>
+              <a class="nav-item" href="#sessions"><span class="nav-icon" data-lucide="messages-square"></span> 会话管理</a>
+              <a class="nav-item" href="#logs"><span class="nav-icon" data-lucide="scroll-text"></span> 操作记录</a>
             </div>
           </nav>
 
@@ -94,8 +95,8 @@
         <main class="content">
           <section class="hero">
             <p class="eyebrow">session · admin setup · 2026-04-24 · 15 modules</p>
-            <h1>晚上好，jingsujiang。<br /><span>ClawPro 初始化配置全部完成。</span></h1>
-            <p class="summary">已保留现有管理入口、配置表单、平台信息、API 文档与产品动态；当前界面按 NIMBUS 控制台规范重新组织为任务会话。</p>
+            <h1>Hi Mila，<span>当前还有 2 项待配置</span></h1>
+            <p class="summary">以下为初始化必填配置，全部完成后用户端即可正常使用；更多高级配置可在后续前往对应功能页继续调整。</p>
           </section>
 
           <section class="command-strip" aria-label="Primary setup query">
@@ -286,6 +287,9 @@
         localStorage.setItem("clawpro-theme", nextTheme);
         applyTheme(nextTheme);
       });
+
+      // Initialize Lucide icons
+      lucide.createIcons();
     </script>
   </body>
 </html>
